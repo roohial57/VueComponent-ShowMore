@@ -1,0 +1,26 @@
+{
+  "name": "my-vue-component",
+  "version": "1.0.0",
+  "description": "A reusable Vue 3 component",
+  "main": "dist/my-vue-component.umd.js",
+  "module": "dist/my-vue-component.esm.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "vue": "^3.3.0",
+    "vite": "^5.0.0",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "vitest": "^2.0.0",
+    "@vue/test-utils": "^2.4.0"
+  }
+}
