@@ -2,7 +2,7 @@
   <div class="app-container">
     <div class="demo-card">
       <h2>ShowMore Demo</h2>
-      <show-more>
+      <show-more tooltipHeader="1111" :showTooltip="false">
         Hello from Demo!Hello from Demo!Hello from Demo!Hello from Demo!Hello from Demo!Hello from Demo!Hello
         from Demo!Hello from Demo!Hello from Demo!Hello from Demo!Hello from Demo!Hello from Demo!
       </show-more>

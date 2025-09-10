@@ -5,7 +5,7 @@
             <slot />
         </span>
 
-        <tooltip v-if="showTitle" :title="title" :color="color" :text="text">
+        <tooltip v-if="showTooltip" :title="tooltipHeader" :color="tooltipColor" :text="text">
             <span class="full-text" v-if="moreVisible" v-html="html"></span>
             <span class="short-text" v-else>{{ shortText }}</span>
 
@@ -52,12 +52,6 @@ export default {
         length: {
             default: 50,
         },
-        title: {
-            default: '',
-        },
-        showTitle: {
-            default: true,
-        },
         showMore: {
             default: true,
         },
@@ -70,7 +64,13 @@ export default {
         lessText: {
             default: `×`,
         },
-        color: {
+        showTooltip: {
+            default: true,
+        },
+        tooltipHeader: {
+            default: '',
+        },
+        tooltipColor: {
             default: `primery`,
         },
     },
