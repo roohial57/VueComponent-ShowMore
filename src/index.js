@@ -1,9 +1,9 @@
-import MyComponent from './MyComponent.vue'
+import ShowMore from './ShowMore.vue'
 
 export default {
   install(app) {
-    app.component('MyComponent', MyComponent)
+    app.component('ShowMore', ShowMore)
   }
 }
 
-export { MyComponent }
+export { ShowMore }

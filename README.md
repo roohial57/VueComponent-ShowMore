@@ -11,9 +11,9 @@ npm install my-vue-component
 ```js
 import { createApp } from 'vue'
 import App from './App.vue'
-import MyComponent from 'my-vue-component'
+import ShowMore from 'my-vue-component'
 
 const app = createApp(App)
-app.use(MyComponent)
+app.use(ShowMore)
 app.mount('#app')
 ```
