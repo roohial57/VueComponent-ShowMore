@@ -10,11 +10,11 @@
             <span class="short-text" v-else>{{ shortText }}</span>
 
             <template v-if="full">
-                <template v-if="showMore">
-                    <span v-if="!moreVisible" class="cursor-pointer" @click="moreVisible = true">{{ moreText }}</span>
-                    <span v-else-if="showLess" class="cursor-pointer" @click="moreVisible = false">{{ lessText }}</span>
+                <template v-if="showMoreEnabled">
+                    <span v-if="!moreVisible" class="show-more-btn" @click="moreVisible = true">{{ showMoreText }}</span>
+                    <span v-else-if="showLessEnabled" class="show-more-btn " @click="moreVisible = false">{{ showLessText }}</span>
                 </template>
-                <span v-else>{{ moreText }}</span>
+                <span v-else>{{ showMoreText }}</span>
             </template>
         </tooltip>
 
@@ -23,11 +23,11 @@
             <span class="short-text" v-else>{{ shortText }}</span>
 
             <template v-if="full">
-                <template v-if="showMore">
-                    <span v-if="!moreVisible" class="cursor-pointer" @click="moreVisible = true">{{ moreText }}</span>
-                    <span v-else-if="showLess" class="cursor-pointer" @click="moreVisible = false">{{ lessText }}</span>
+                <template v-if="showMoreEnabled">
+                    <span v-if="!moreVisible" class="show-more-btn" @click="moreVisible = true">{{ showMoreText }}</span>
+                    <span v-else-if="showLessEnabled" class="show-more-btn" @click="moreVisible = false">{{ showLessText }}</span>
                 </template>
-                <span v-else>{{ moreText }}</span>
+                <span v-else>{{ showMoreText }}</span>
             </template>
         </template>
 
@@ -50,18 +50,18 @@ export default {
     },
     props: {
         length: {
-            default: 50,
+            default: 30,
         },
-        showMore: {
+        showMoreEnabled: {
             default: true,
         },
-        moreText: {
+        showMoreText: {
             default: '...',
         },
-        showLess: {
+        showLessEnabled: {
             default: true,
         },
-        lessText: {
+        showLessText: {
             default: `×`,
         },
         showTooltip: {
@@ -94,4 +94,9 @@ export default {
 </script>
 
 <style>
+.show-more-btn{
+    cursor: pointer;
+    color: blueviolet;
+    text-decoration: underline;
+}
 </style>
