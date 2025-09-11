@@ -15,18 +15,18 @@
 
       <div class="demo-section">
         <label>Prop: showMoreEnabled</label>
-        <show-more :showMoreEnabled="true" showMoreText="Show more">
+        <show-more :showMoreEnabled="true">
           When enabled, a "Show more" button appears after the truncated text.
         </show-more>
-        <show-more :showMoreEnabled="false">
+        <show-more :showMoreEnabled="false" :length="40">
           When disabled, no button is shown and the text stays truncated.
         </show-more>
       </div>
 
       <div class="demo-section">
         <label>Prop: showMoreText</label>
-        <show-more :showMoreEnabled="true" showMoreText="+ Expand">
-          Here the expand button label is customized to "+ Expand".
+        <show-more showMoreText=" Expand">
+          Here the expand button label is customized to " Expand".
         </show-more>
       </div>
 
@@ -47,42 +47,38 @@
         </show-more>
       </div>
 
+
+      <div class="demo-section">
+        <label>Prop: showMoreBtnStyle</label>
+        <show-more :showMoreBtnStyle="{ color: '#e91e63', fontWeight: 'bold' }">
+          The "Show more" and "Less" buttons are styled with custom CSS.
+        </show-more>
+      </div>
+
       <div class="demo-section">
         <label>Prop: showTooltip</label>
         <show-more :showTooltip="true">
           Hover over this text to see the tooltip in action.
         </show-more>
+        <show-more :showTooltip="false">
+          Tooltip is disabled for this text, so nothing appears on hover.
+        </show-more>
       </div>
 
       <div class="demo-section">
-        <label>Props: tooltipHeader & showTooltip</label>
+        <label>Props: tooltipHeader</label>
         <show-more tooltipHeader="Additional details" :showTooltip="true">
-          Hover over this text to see a tooltip with a custom header.
+          This is some text that demonstrates the tooltipHeader prop. Hover to see a tooltip with a custom header.
         </show-more>
       </div>
 
       <div class="demo-section">
         <label>Prop: tooltipColor</label>
-        <show-more :showTooltip="true" tooltipHeader="Success Info" tooltipColor="success">
-          This tooltip is styled with the "success" color.
+        <show-more tooltipColor="#4caf50">
+          This tooltip is styled with #4caf50 color.
         </show-more>
       </div>
 
-      <div class="demo-section">
-        <label>All props combined</label>
-        <show-more
-          :length="25"
-          :showTooltip="true"
-          tooltipHeader="Full Example"
-          tooltipColor="warning"
-          :showMoreEnabled="true"
-          showMoreText="Read more"
-          :showLessEnabled="true"
-          showLessText="Close"
-        >
-          This block combines all props: truncation, tooltip, custom colors, and both expand/collapse actions.
-        </show-more>
-      </div>
     </div>
   </div>
 </template>
@@ -99,25 +95,29 @@ import { ShowMore } from '../src/index.js'
   justify-content: center;
   background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
 }
+
 .demo-card {
   background: #fff;
   padding: 32px 24px;
   border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   min-width: 340px;
   max-width: 480px;
   text-align: center;
 }
+
 .demo-section {
   margin-bottom: 24px;
   text-align: left;
 }
+
 .demo-section label {
   display: block;
   font-weight: 600;
   margin-bottom: 6px;
   color: #1976d2;
 }
+
 h2 {
   margin-bottom: 18px;
   color: #1976d2;

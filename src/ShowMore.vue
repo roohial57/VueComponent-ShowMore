@@ -1,4 +1,3 @@
-
 <template>
     <span class="show-more">
         <span v-show="false" ref="input">
@@ -11,10 +10,10 @@
 
             <template v-if="full">
                 <template v-if="showMoreEnabled">
-                    <span v-if="!moreVisible" class="show-more-btn" @click="moreVisible = true">{{ showMoreText }}</span>
-                    <span v-else-if="showLessEnabled" class="show-more-btn " @click="moreVisible = false">{{ showLessText }}</span>
+                    <span v-if="!moreVisible" class="show-more-btn" @click="moreVisible = true" :style="showMoreBtnStyle">{{ showMoreText }}</span>
+                    <span v-else-if="showLessEnabled" class="show-more-btn" @click="moreVisible = false" :style="showMoreBtnStyle">{{ showLessText }}</span>
                 </template>
-                <span v-else>{{ showMoreText }}</span>
+                <span v-else :style="showMoreBtnStyle">{{ showMoreText }}</span>
             </template>
         </tooltip>
 
@@ -24,10 +23,10 @@
 
             <template v-if="full">
                 <template v-if="showMoreEnabled">
-                    <span v-if="!moreVisible" class="show-more-btn" @click="moreVisible = true">{{ showMoreText }}</span>
-                    <span v-else-if="showLessEnabled" class="show-more-btn" @click="moreVisible = false">{{ showLessText }}</span>
+                    <span v-if="!moreVisible" class="show-more-btn" @click="moreVisible = true" :style="showMoreBtnStyle">{{ showMoreText }}</span>
+                    <span v-else-if="showLessEnabled" class="show-more-btn" @click="moreVisible = false" :style="showMoreBtnStyle">{{ showLessText }}</span>
                 </template>
-                <span v-else>{{ showMoreText }}</span>
+                <span v-else :style="showMoreBtnStyle">{{ showMoreText }}</span>
             </template>
         </template>
 
@@ -64,6 +63,10 @@ export default {
         showLessText: {
             default: `×`,
         },
+        showMoreBtnStyle: {
+            type: [String, Object],
+            default: ''
+        },
         showTooltip: {
             default: true,
         },
@@ -97,6 +100,8 @@ export default {
 .show-more-btn{
     cursor: pointer;
     color: blueviolet;
-    text-decoration: underline;
+    font-size: 19pt;
+    font-weight: bolder;
+    line-height: 6px;
 }
 </style>
