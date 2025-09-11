@@ -1,9 +1,9 @@
 {
-  "name": "my-vue-component",
-  "version": "1.0.0",
-  "description": "A reusable Vue 3 component",
-  "main": "dist/my-vue-component.umd.js",
-  "module": "dist/my-vue-component.esm.js",
+  "name": "showmore-vue-component",
+  "version": "1.0.1",
+  "description": "A reusable Vue ShowMore and Tooltip component for Vue applications.",
+  "main": "dist/showmore-vue-component.umd.js",
+  "module": "dist/showmore-vue-component.esm.js",
   "files": [
     "dist"
   ],
