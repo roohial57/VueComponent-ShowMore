@@ -1,7 +1,21 @@
 {
-  "name": "showmore-vue-component",
-  "version": "1.0.1",
+  "name": "showmore-vue",
+  "version": "1.0.3",
   "description": "A reusable Vue ShowMore and Tooltip component for Vue applications.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roohial57/VueComponent-ShowMore"
+  },
+  "keywords": [
+    "show more",
+    "expand",
+    "collapse",
+    "show less",
+    "vue",
+    "vuejs"
+  ],
+  "author": "Roohallah Alizadeh",
+  "license": "MIT",
   "main": "dist/showmore-vue-component.umd.js",
   "module": "dist/showmore-vue-component.esm.js",
   "files": [
