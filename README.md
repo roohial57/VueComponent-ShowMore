@@ -2,6 +2,7 @@
 # ShowMore-VueComponent
 
 A reusable Vue 3 component that provides text truncation with "Show more"/"Show less" functionality and an optional tooltip. Includes the `ShowMore` and `Tooltip` components for flexible usage in your Vue 3 applications.
+www.npmjs.com/package/showmore-vue/access
 
 ## Install
 ```bash
