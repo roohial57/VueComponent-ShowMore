@@ -6,14 +6,14 @@ www.npmjs.com/package/showmore-vue/access
 
 ## Install
 ```bash
-npm install showmore-vue-component
+npm install showmore-vue
 ```
 
 ## Usage
 ```js
 import { createApp } from 'vue';
 import App from './App.vue';
-import { ShowMore } from 'showmore-vue-component';
+import { ShowMore } from 'showmore-vue';
 
 const app = createApp(App);
 app.component('ShowMore', ShowMore);

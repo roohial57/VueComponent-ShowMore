@@ -1,6 +1,6 @@
 {
   "name": "showmore-vue",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A reusable Vue ShowMore and Tooltip component for Vue applications.",
   "repository": {
     "type": "git",
