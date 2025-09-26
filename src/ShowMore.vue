@@ -86,12 +86,12 @@ export default {
         }
     },
     updated() {
-        this.text = this.$refs.input.innerText.trim();
-        this.html = this.$refs.input.innerHTML.trim();
+        this.text = (this.$refs.input.innerText || '').trim();
+        this.html = (this.$refs.input.innerHTML || '').trim();
     },
     mounted() {
-        this.text = this.$refs.input.innerText.trim();
-        this.html = this.$refs.input.innerHTML.trim();
+        this.text = (this.$refs.input.innerText || '').trim();
+        this.html = (this.$refs.input.innerHTML || '').trim();
     }
 }
 </script>
